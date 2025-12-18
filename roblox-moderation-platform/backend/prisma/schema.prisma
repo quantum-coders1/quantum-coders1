@@ -1,0 +1,20 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Appeal {
+  id        Int      @id @default(autoincrement())
+  banId     String   @unique
+  userId    BigInt
+  username  String
+  content   String
+  evidence  String?
+  status    String   @default("pending")
+  staffNote String?
+  createdAt DateTime @default(now())
+}

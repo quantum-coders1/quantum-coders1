@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ban Appeal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="card">
+    <h1>Ban Appeal</h1>
+
+    <label>Ban ID</label>
+    <input id="banId" placeholder="BAN-XXXXX">
+
+    <label>Your Explanation</label>
+    <textarea id="content" placeholder="Explain why you believe this ban should be removed..."></textarea>
+
+    <label>Evidence (optional)</label>
+    <input id="evidence" placeholder="https://streamable.com/...">
+
+    <p class="warning">
+      Submitting false or misleading information may result in denial.
+    </p>
+
+    <button onclick="submitAppeal()">Submit Appeal</button>
+    <p id="status"></p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
